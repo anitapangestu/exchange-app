@@ -1,11 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import { SOCKET_URL } from "../shared/constants";
 
+type TChartTimeframe = '1D' | '1W' | '14D' | '1M';
+
 export default function useChartData() {
   const ws = useRef<WebSocket | null>(null);
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [chartData, setChartData] = useState<number[][]>([]);
+  const [timeframe, setTimeframe] = useState<TChartTimeframe>('1D');
 
   useEffect(() => {
     setIsLoading(true);
@@ -20,7 +23,7 @@ export default function useChartData() {
       ws.current.send(JSON.stringify({
         event: 'subscribe',
         channel: 'candles',
-        key: 'trade:1D:tBTCUSD'
+        key: `trade:${timeframe}:tBTCUSD`
       }))
     }
 
@@ -72,7 +75,7 @@ export default function useChartData() {
         ws.current.close();
       }
     }
-  }, []);
+  }, [timeframe]);
 
   const chartOptions = useMemo(() => {
     const count = 30;
@@ -109,5 +112,6 @@ export default function useChartData() {
     chartOptions,
     isLoading,
     isError,
+    setTimeframe,
   }
 }

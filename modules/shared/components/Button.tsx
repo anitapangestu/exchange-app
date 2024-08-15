@@ -9,13 +9,25 @@ export default function Button({
   onPress,
 }: {
   title: string;
-  type: 'PRIMARY' | 'DESTRUCTIVE';
+  type: 'PRIMARY' | 'DESTRUCTIVE' | 'OUTLINE';
   style?: ViewStyle | Array<ViewStyle | undefined>;
   textStyle?: TextStyle;
   onPress: () => void;
 }) {
-  const buttonColor = type === 'PRIMARY' ? Token.color.uiBluePrimary : Token.color.uiRedSecondary;
-
+  let buttonColor;
+  switch (type) {
+    case 'PRIMARY':
+      buttonColor = Token.color.uiBluePrimary;
+      break;
+    case 'OUTLINE':
+      buttonColor = 'transparent';
+      break;
+    default:
+      buttonColor = Token.color.uiRedSecondary;
+      break;
+  }
+  const textColor = type === 'OUTLINE' ? Token.color.uiBluePrimary : Token.color.uiLightPrimary;
+  
   return (
     <Pressable style={({ pressed }) => [
       styles.button, 
@@ -24,7 +36,13 @@ export default function Button({
       style]} 
       onPress={onPress}
     >
-      <Text style={[styles.text, textStyle]}>{title}</Text>
+      <Text style={[
+        styles.text,
+        { color: textColor },
+        textStyle
+      ]}>
+        {title}
+      </Text>
     </Pressable>
   );
 }
