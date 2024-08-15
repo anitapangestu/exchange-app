@@ -1,0 +1,103 @@
+{
+ "history": [
+    {
+      "id": 1,
+      "timestamp": 1723643232011,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "fromValue": 50,
+      "toValue": 0.0005,
+      "status": "OPEN"
+    },
+    {
+      "id": 2,
+      "timestamp": 1723643232010,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "fromValue": 56,
+      "toValue": 0.0009,
+      "status": "OPEN"
+    },
+    {
+      "id": 3,
+      "timestamp": 1723643232009,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "status": "COMPLETED",
+      "fromValue": 54,
+      "toValue": 0.0007
+    },
+    {
+      "id": 4,
+      "timestamp": 1723643232008,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "fromValue": 60,
+      "toValue": 0.001,
+      "status": "COMPLETED"
+    },
+    {
+      "id": 5,
+      "timestamp": 1723643232007,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "fromValue": 45,
+      "toValue": 0.0004,
+      "status": "COMPLETED"
+    },
+    {
+      "id": 6,
+      "timestamp": 1723643232006,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "fromValue": 44,
+      "toValue": 0.0003,
+      "status": "COMPLETED"
+    },
+    {
+      "id": 7,
+      "timestamp": 1723643232005,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "fromValue": 43,
+      "toValue": 0.0001,
+      "status": "COMPLETED"
+    },
+    {
+      "id": 8,
+      "timestamp": 1723643232004,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "fromValue": 42,
+      "toValue": 0.0003,
+      "status": "COMPLETED"
+    },
+    {
+      "id": 9,
+      "timestamp": 1723643232003,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "fromValue": 46,
+      "toValue": 0.0005,
+      "status": "COMPLETED"
+    },
+    {
+      "id": 10,
+      "timestamp": 1723643232002,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "fromValue": 47,
+      "toValue": 0.0006,
+      "status": "COMPLETED"
+    },
+    {
+      "id": 11,
+      "timestamp": 1723643232001,
+      "fromSymbol": "USD",
+      "toSymbol": "BTC",
+      "fromValue": 90,
+      "toValue": 0.0006,
+      "status": "COMPLETED"
+    }
+  ] 
+}
